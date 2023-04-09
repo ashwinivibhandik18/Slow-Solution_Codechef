@@ -1,0 +1,19 @@
+t=int(input())
+final_output=[]
+for i in range(t):
+    count=0
+    op=0
+    final_sum=0
+    T,N,Sum=map(int,input().split())
+    for i in range(T):
+        if final_sum+N<=Sum:
+            op+=N**2 
+            final_sum+=N 
+        else:
+            op+=(Sum-final_sum)**2
+            break;
+            
+    final_output.append(op)
+for i in final_output:
+    print(i)
+    
